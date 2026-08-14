@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Индивидуальные сеансы биодинамики · Юлия ОздеМир</title>
+<meta name="description" content="Индивидуальные сеансы биодинамики очно в Анталье и дистанционно по всему миру. Боли, болезни, восстановление после травм, операций, родов и тяжёлых периодов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5EEDD;
+  --cream-deep:#F0E6D0;
+  --ink:#16302B;
+  --ink-dim:rgba(22,48,43,.72);
+  --muted:#96805F;
+  --rule:#D9CDAE;
+  --amber:#E3A53C;
+  --maxw:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%);
+  background-attachment:fixed;
+  color:var(--ink);
+  font-family:"Manrope",system-ui,sans-serif;
+  font-weight:300;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Prata",Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.18;margin:0}
+p{margin:0}
+a{color:inherit}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+section{padding:96px 0;border-top:1px solid var(--rule)}
+.eyebrow{
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;margin-bottom:34px;
+}
+
+/* hero */
+.hero{
+  border-top:0;
+  padding:76px 0 104px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-38vh;left:50%;
+  width:120vh;height:120vh;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(227,165,60,.20) 0%,rgba(227,165,60,.07) 42%,transparent 70%);
+  animation:breathe 11s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes breathe{
+  0%,100%{transform:translateX(-50%) scale(1);opacity:.7}
+  50%{transform:translateX(-50%) scale(1.11);opacity:.95}
+}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(38px,6.4vw,68px);max-width:16ch;margin-bottom:30px}
+.lede{font-size:clamp(17px,2.1vw,20px);max-width:62ch;color:var(--ink-dim);line-height:1.66}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;margin-top:46px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:17px 34px;border-radius:2px;
+  background:var(--ink);color:var(--cream);
+  font-family:"Manrope",sans-serif;font-weight:600;font-size:16px;
+  letter-spacing:.01em;text-decoration:none;
+  transition:background .25s ease,transform .25s ease;
+}
+.btn:hover{background:#1e433c;transform:translateY(-1px)}
+.btn-price{
+  background:transparent;color:var(--ink);
+  border:1px solid var(--rule);
+  font-weight:400;text-align:center;line-height:1.35;
+  flex-direction:column;padding:13px 30px;
+}
+.btn-price:hover{background:rgba(217,205,174,.28);transform:none}
+.btn-price b{font-weight:600;font-size:19px;letter-spacing:.01em}
+.btn-price span{font-size:13px;color:var(--muted)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+
+/* списки-строки */
+h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
+.lines{display:grid;gap:0;max-width:78ch}
+.lines p{
+  padding:19px 0;
+  border-bottom:1px solid var(--rule);
+  font-size:17.5px;
+}
+.lines p:first-child{border-top:1px solid var(--rule)}
+
+/* цитаты */
+.quotes{display:grid;gap:30px;max-width:74ch}
+.quotes p{
+  font-family:"Prata",Georgia,serif;
+  font-size:clamp(19px,2.5vw,25px);
+  line-height:1.44;
+  color:var(--ink);
+  padding-left:26px;
+  border-left:1px solid var(--amber);
+}
+.sub{color:var(--muted);font-size:15px;margin-top:-30px;margin-bottom:44px}
+
+/* последствия */
+.arrows{display:grid;gap:0;max-width:76ch}
+.arrows div{
+  display:grid;grid-template-columns:34px 1fr;gap:8px;
+  padding:22px 0;border-bottom:1px solid var(--rule);
+}
+.arrows span{color:var(--amber);font-size:18px;line-height:1.5}
+.intro{color:var(--ink-dim);max-width:66ch;margin-bottom:38px;margin-top:-24px}
+
+/* шаги */
+.steps{display:grid;gap:0;counter-reset:s}
+.step{
+  display:grid;grid-template-columns:64px 1fr;
+  gap:14px;padding:30px 0;border-bottom:1px solid var(--rule);
+  align-items:start;
+}
+.step:first-child{border-top:1px solid var(--rule)}
+.step .num{
+  font-family:"Prata",serif;font-size:26px;color:var(--amber);line-height:1.1;
+}
+.step h3{font-size:20px;margin-bottom:9px}
+.step p{color:var(--ink-dim);max-width:64ch}
+
+/* отзывы */
+.notes{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(266px,1fr));
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+.notes p{
+  background:var(--cream);
+  padding:26px 24px;
+  font-size:16.5px;
+  line-height:1.5;
+}
+.notes p::before{content:"“";color:var(--amber);font-family:"Prata",serif;font-size:26px;display:block;line-height:.6;margin-bottom:12px}
+
+/* сомнения */
+.doubt{max-width:70ch}
+.doubt h3{font-family:"Prata",serif;font-size:clamp(20px,2.6vw,25px);margin-bottom:20px}
+.doubt p{color:var(--ink-dim)}
+
+/* финал */
+.final{background:var(--ink);color:var(--cream);border-top:0}
+.final .eyebrow{color:var(--amber)}
+.final h2{margin-bottom:24px}
+.final p{color:rgba(245,238,221,.72);max-width:64ch;margin-bottom:44px}
+.final .btn{background:var(--amber);color:var(--ink)}
+.final .btn:hover{background:#efb352}
+.final .btn-price{color:var(--cream);border-color:rgba(245,238,221,.28)}
+.final .btn-price:hover{background:rgba(245,238,221,.07)}
+.final .btn-price span{color:rgba(245,238,221,.6)}
+
+footer{
+  padding:40px 0 56px;
+  background:var(--ink);
+  color:rgba(245,238,221,.66);font-size:14px;
+  display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;
+}
+footer a{text-decoration:none}
+footer a:hover{color:var(--amber)}
+
+@media (max-width:640px){
+  section{padding:68px 0}
+  .hero{padding:54px 0 76px}
+  .wrap{padding:0 22px}
+  .btn,.btn-price{width:100%}
+  .step{grid-template-columns:44px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
+    <h1>Тело больше не справляется само</h1>
+    <p class="lede">Биодинамика это решение ваших жизненных проблем через мягкую работу с телом, почти неощутимыми касаниями, без манипуляций, вправлений и давления. Боли, болезни, восстановление после травм, операций, родов, нервного срыва и тяжёлых периодов, состояние, из которого организм сам уже не выходит.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
+      <a class="btn btn-price" href="https://wa.me/905368726735" target="_blank" rel="noopener"><b>12 000 ₽</b><span>час работы и неделя сопровождения</span></a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>С чем сюда приходят</h2>
+    <div class="lines">
+      <p>Утро начинается с усталости: глаза открылись в 5:40 сами, и мысли уже на работе.</p>
+      <p>Ловите себя с поднятыми плечами и сжатой челюстью, и не помните, когда было иначе.</p>
+      <p>Отпуск был, а сил нет: две недели моря стёрлись за первый рабочий день.</p>
+      <p>Магний, глицин, прогулки, травяной чай, цифровой детокс. Аптечка растёт, состояние прежнее.</p>
+      <p>Сидеть без дела не получается: рука сама тянется к телефону, тело просит задач.</p>
+      <p>Анализы в порядке, врачи разводят руками, а вам всё так же не в порядке.</p>
+      <p>Болит спина, шея, голова, колено. Обезболивающее помогает на день, потом всё сначала.</p>
+      <p>Заболели и никак не выздоровеете до конца: анализы уже в норме, а сил как не было, так и нет.</p>
+      <p>После операции или травмы прошли месяцы, врачи довольны, а тело работает не так, как раньше.</p>
+      <p>После родов или кесарева прошёл год, а тело всё ещё чужое.</p>
+      <p>Вернулись в зал после травмы, врач допустил к нагрузкам, но прежний объём не идёт.</p>
+      <p>Мама выздоровела, развод закончился, деньги на бизнес нашлись. Жить бы теперь, а здоровье посыпалось.</p>
+      <p>После нервного срыва прошло время, вы вернулись к делам, а тело до сих пор дёргается от любой мелочи.</p>
+      <p>Живёте с диагнозом, который никуда не денется, и учитесь жить рядом с ним, а не против него.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Так это звучит у тех, кто приходит</h2>
+    <p class="sub">Прямая речь людей до первого сеанса.</p>
+    <div class="quotes">
+      <p>Я уже реально не понимаю, где заканчивается моё «я устала» и начинается нормальная реакция человека на жизнь</p>
+      <p>Просто внутреннее напряжение, которое сильно давит в тело, особенно в шею, спину, голову</p>
+      <p>Магний, глицин, прогулка перед сном, цифровой детокс, травяной чай, горячий душ, режим, и вот это всё не помогает. Оно не работает</p>
+      <p>Кто-нибудь знает, как расслабиться? Прям вот полностью расслабиться и отдохнуть?</p>
+      <p>Если сейчас хорошо, потом будет плохо</p>
+      <p>Я не могу спокойно сидеть без дела. Мне постоянно надо что-то делать</p>
+      <p>Как взрастить в себе чувство опоры? Где искать её? Почему так сложно подойти к себе и говорить «нет»?</p>
+      <p>Честно, я так устала. Будто потеряла себя где-то по дороге</p>
+      <p>Мне просто нужно, чтобы кто-то взял на себя все вопросы, хотя бы на неделю-две. Мне бы сохраниться</p>
+      <p>Опять всё в норме. Лучше бы уже нашли хоть что-то</p>
+      <p>Все врачи говорили: это нервы. Оказалось, не нервы</p>
+      <p>Четыре месяца после замены сустава, а я всё хромаю. К вечеру сильнее</p>
+      <p>Шов зажил, а внутри тянет до сих пор</p>
+      <p>Бывают дни, когда я себя в зеркале не узнаю</p>
+      <p>Мне бы теперь жить, а здоровье посыпалось</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Куда это обычно ведёт</h2>
+    <p class="intro">Хроническое напряжение редко проходит само, тело привыкает и записывает его в норму. Дальше обычно так:</p>
+    <div class="arrows">
+      <div><span>→</span><p>Контроль становится образом жизни: доверять себе, людям и планам всё труднее.</p></div>
+      <div><span>→</span><p>Круг сужается: меньше поездок, встреч и перемен, потому что «так спокойнее».</p></div>
+      <div><span>→</span><p>Тело говорит громче: сон, боль, усталость, обследования без диагнозов.</p></div>
+      <div><span>→</span><p>И самое незаметное: к состоянию привыкаешь настолько, что оно начинает казаться характером.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Как проходит работа</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>Запись</h3>
+          <p>Выбираем время и коротко обсуждаем, с чем вы приходите.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3>Разговор в начале сеанса</h3>
+          <p>Что происходит сейчас, как вы себя чувствуете, с чем будем работать сегодня.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Сам сеанс</h3>
+          <p>Вы лежите на кушетке у меня в кабинете или у себя дома, в спокойном месте, где вас никто не потревожит. Работа идёт мягкими, почти неощутимыми касаниями. Дистанционный формат устроен по тому же принципу, и на практике дистанционный сеанс бывает даже эффективнее очного.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div>
+          <h3>Завершение и неделя сопровождения</h3>
+          <p>Обсуждаем ощущения после сеанса, неделю остаёмся на связи: отслеживаю состояние и отвечаю на вопросы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Что отмечают после сеансов</h2>
+    <p class="intro">Гарантий в телесной работе честно не бывает, тело у каждого своё, и темп у него свой. Вот что чаще всего называют клиенты:</p>
+    <div class="notes">
+      <p>Я даже не понимала, насколько сильно устала</p>
+      <p>Я так не высыпалась уже несколько лет</p>
+      <p>Впервые за долгое время проснулась без внутреннего напряжения</p>
+      <p>У меня стало меньше страхов</p>
+      <p>Появилось чувство безопасности</p>
+      <p>На душе стало спокойно</p>
+      <p>Я выхожу из дома без страха и без волнения</p>
+      <p>Боль уменьшилась или совсем ушла</p>
+      <p>У меня расслабилась челюсть</p>
+      <p>В голове стало яснее, стало легче думать</p>
+      <p>Появилось чувство уверенности</p>
+      <p>Я лучше слышу себя и понимаю, чего хочу</p>
+      <p>Вернулся контакт с собой</p>
+      <p>Как будто больше не нужно всё время куда-то бежать</p>
+      <p>Я перестала кричать на детей</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap doubt">
+    <h2>Сомнения</h2>
+    <h3>Вдруг это опять окажется пустой тратой денег?</h3>
+    <p>Результат за один раз не обещаю. Но час полной остановки вы получите в любом случае, а всё, что осталось непонятным или неощутимым, обсуждаем на сопровождении (оно входит в стоимость).</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Один час, чтобы попробовать</h2>
+    <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
+      <a class="btn btn-price" href="https://wa.me/905368726735" target="_blank" rel="noopener"><b>12 000 ₽</b><span>час работы и неделя сопровождения</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;width:100%">
+    <span>Юлия ОздеМир · биодинамика · очно и онлайн</span>
+    <span><a href="https://wa.me/905368726735" target="_blank" rel="noopener">WhatsApp +90 536 872 67 35</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
