@@ -167,10 +167,15 @@ h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 
 /* сомнения */
 .doubt-grid{display:grid;gap:0;max-width:78ch}
-.doubt-item{padding:28px 0;border-bottom:1px solid var(--line-hairline)}
+.doubt-item{padding:24px 0;border-bottom:1px solid var(--line-hairline)}
 .doubt-item:first-child{border-top:1px solid var(--line-hairline)}
-.doubt-item h3{font-family:var(--font-display);font-size:clamp(19px,2.4vw,23px);margin-bottom:12px;font-weight:400}
-.doubt-item p{color:var(--text-body)}
+.doubt-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.doubt-item summary::-webkit-details-marker{display:none}
+.doubt-item h3{font-family:var(--font-display);font-size:clamp(19px,2.4vw,23px);font-weight:400;margin:0}
+.doubt-item .acc-icon{font-family:var(--font-sans);font-size:26px;font-weight:300;color:var(--sand-600);flex:0 0 auto;line-height:1;transition:transform .2s ease}
+.doubt-item[open] .acc-icon{transform:rotate(45deg)}
+.doubt-item p{color:var(--text-body);margin-top:16px}
+.doubt-item p+p{margin-top:14px}
 
 /* финал */
 .final{background:var(--water-900);color:var(--water-000);border-top:0;position:relative;overflow:hidden}
@@ -357,22 +362,22 @@ footer a:hover{color:var(--sand-400)}
   <div class="wrap" style="position:relative;z-index:1">
     <div class="doubt-grid" style="max-width:78ch">
       <h2 style="margin-bottom:44px">Сомнения</h2>
-      <div class="doubt-item">
-        <h3>Вдруг это опять окажется пустой тратой денег?</h3>
+      <details class="doubt-item" open>
+        <summary><h3>Вдруг это опять окажется пустой тратой денег?</h3><span class="acc-icon">+</span></summary>
         <p>Результат за один сеанс не обещаю. <span class="em-ink">Тело не обязано</span> за час разобрать то, что копило несколько лет. После первой встречи изменения могут быть заметны сразу, проявиться позже или оказаться совсем не такими, как вы ожидали.</p>
         <p>После каждого сеанса мы обсуждаем реакцию тела, а выводы делаем не раньше трёх встреч. Так можно увидеть динамику, а не случайное впечатление одного дня. Сопровождение уже входит в стоимость.</p>
-      </div>
-      <div class="doubt-item">
-        <h3>Я уже всё перепробовала: йогу, медитации, детокс. Ничего не помогает</h3>
+      </details>
+      <details class="doubt-item">
+        <summary><h3>Я уже всё перепробовала: йогу, медитации, детокс. Ничего не помогает</h3><span class="acc-icon">+</span></summary>
         <p>Йога, медитации и дыхательные практики требуют усилий: нужно выполнять, контролировать, соблюдать. Иногда даже восстановление превращается в очередной пункт ежедневника.</p>
         <p>На сеансе не нужно осваивать ещё одну технику. Но участвовать придётся. Замечать ощущения, выдерживать реакции тела, отвечать на вопросы и быть готовой говорить о личном, если работа приводит туда. Мы проходим этот процесс вместе.</p>
-      </div>
-      <div class="doubt-item">
-        <h3>Это же ещё одна «альтернативная медицина»?</h3>
+      </details>
+      <details class="doubt-item">
+        <summary><h3>Это же ещё одна «альтернативная медицина»?</h3><span class="acc-icon">+</span></summary>
         <p>Да, биодинамика относится к альтернативным методам. Я работаю не вместо врача, а в синергии с медициной. Врач занимается диагнозом и лечением. На сеансе мы работаем с тем, как тело проживает нагрузку и восстанавливается.</p>
         <p>Изменения происходят всегда, но не всегда их можно оценить после первой встречи. Иногда телу нужно время, чтобы ответ стал заметен.</p>
         <p>Терпение — это ресурс, на котором едет исцеление.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
