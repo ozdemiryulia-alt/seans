@@ -7,197 +7,193 @@
 <meta name="description" content="Индивидуальные сеансы биодинамики очно в Анталье и дистанционно по всему миру. Боли, болезни, восстановление после травм, операций, родов и тяжёлых периодов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#F5EEDD;
-  --cream-deep:#F0E6D0;
-  --ink:#16302B;
-  --ink-dim:rgba(22,48,43,.72);
-  --muted:#96805F;
-  --rule:#D9CDAE;
-  --amber:#E3A53C;
+  /* ===== ВОДА — ядро палитры (Вода и Золото) ===== */
+  --water-000:#FAFDFD; --water-050:#F1F7F7; --water-100:#E4EFEF; --water-200:#CFE3E3;
+  --water-300:#B0D0D1; --water-500:#6FA9AC; --water-700:#33787E; --water-800:#1F5F66; --water-900:#14454B;
+  --ink-900:#0F2A2E; --ink-700:#234A50; --ink-500:#4E7175; --ink-300:#8FA9AB;
+  --air-000:#FFFFFF; --air-050:#FCFBF8; --air-100:#F6F3EC; --air-200:#EDE8DE; --air-300:#DED8CA;
+  --sand-100:#F5EADA; --sand-200:#EBDDC8; --sand-400:#D8BE9B; --sand-600:#B08E63; --sand-800:#6E5539;
+
+  --surface-page:var(--water-050);
+  --surface-card:rgba(255,255,255,.66);
+  --surface-card-border:rgba(20,69,75,.10);
+  --text-title:var(--ink-900);
+  --text-body:rgba(15,42,46,.74);
+  --text-muted:rgba(15,42,46,.50);
+  --line-hairline:rgba(20,69,75,.14);
+  --accent:var(--sand-600);
+
+  --font-display:"Prata","Times New Roman",serif;
+  --font-sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+
+  --radius-1:3px; --radius-2:8px; --radius-soft:48px;
+  --sp-5:24px; --sp-7:48px; --sp-9:104px;
   --maxw:1120px;
+
+  --scrim-bottom:linear-gradient(to top,rgba(15,42,46,.60) 0%,rgba(15,42,46,.18) 42%,rgba(15,42,46,0) 78%);
+  --shadow-soft:0 20px 50px -30px rgba(15,42,46,.20);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%);
-  background-attachment:fixed;
-  color:var(--ink);
-  font-family:"Manrope",system-ui,sans-serif;
+  background:var(--surface-page);
+  color:var(--text-title);
+  font-family:var(--font-sans);
   font-weight:300;
   font-size:17px;
-  line-height:1.62;
+  line-height:1.66;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:"Prata",Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.18;margin:0}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:.01em;line-height:1.18;margin:0;color:var(--text-title)}
 p{margin:0}
 a{color:inherit}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-section{padding:96px 0;border-top:1px solid var(--rule)}
+section{padding:96px 0;border-top:1px solid var(--line-hairline)}
 .eyebrow{
-  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--muted);font-weight:500;margin-bottom:34px;
+  font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--sand-600);font-weight:600;margin-bottom:34px;
 }
 
 /* hero */
 .hero{
   border-top:0;
-  padding:76px 0 104px;
+  padding:88px 0 96px;
   position:relative;
   overflow:hidden;
+  background:linear-gradient(165deg,var(--water-100) 0%,var(--air-050) 55%,var(--sand-100) 100%);
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  top:-38vh;left:50%;
-  width:120vh;height:120vh;
-  transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(227,165,60,.20) 0%,rgba(227,165,60,.07) 42%,transparent 70%);
-  animation:breathe 11s ease-in-out infinite;
-  pointer-events:none;
+.hero-wave{
+  position:absolute;right:-8%;top:-6%;width:52%;max-width:560px;aspect-ratio:3/4;
+  border-radius:var(--radius-soft);overflow:hidden;
+  box-shadow:var(--shadow-soft);
+  opacity:.92;
 }
-@keyframes breathe{
-  0%,100%{transform:translateX(-50%) scale(1);opacity:.7}
-  50%{transform:translateX(-50%) scale(1.11);opacity:.95}
-}
-.hero .wrap{position:relative}
-.hero h1{font-size:clamp(38px,6.4vw,68px);max-width:16ch;margin-bottom:30px}
-.lede{font-size:clamp(17px,2.1vw,20px);max-width:62ch;color:var(--ink-dim);line-height:1.66}
+.hero-wave img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:860px){.hero-wave{display:none}}
+.hero .wrap{position:relative;max-width:640px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);max-width:14ch;margin-bottom:28px}
+.lede{font-size:clamp(17px,2.1vw,20px);max-width:56ch;color:var(--text-body);line-height:1.68}
 
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;margin-top:46px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:44px}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  padding:17px 34px;border-radius:2px;
-  background:var(--ink);color:var(--cream);
-  font-family:"Manrope",sans-serif;font-weight:600;font-size:16px;
-  letter-spacing:.01em;text-decoration:none;
+  padding:17px 34px;border-radius:var(--radius-1);
+  background:var(--sand-600);color:var(--air-000);
+  font-family:var(--font-sans);font-weight:600;font-size:15px;
+  letter-spacing:.10em;text-transform:uppercase;text-decoration:none;
   transition:background .25s ease,transform .25s ease;
 }
-.btn:hover{background:#1e433c;transform:translateY(-1px)}
-.btn-price{
-  background:transparent;color:var(--ink);
-  border:1px solid var(--rule);
-  font-weight:400;text-align:center;line-height:1.35;
-  flex-direction:column;padding:13px 30px;
+.btn:hover{background:#9c7b52;transform:translateY(-1px)}
+.btn-secondary{
+  background:transparent;color:var(--text-title);
+  border:1px solid var(--ink-300);
+  font-weight:500;text-transform:none;letter-spacing:.01em;
 }
-.btn-price:hover{background:rgba(217,205,174,.28);transform:none}
-.btn-price b{font-weight:600;font-size:19px;letter-spacing:.01em}
-.btn-price span{font-size:13px;color:var(--muted)}
-a:focus-visible,.btn:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+.btn-secondary:hover{background:rgba(20,69,75,.06);transform:none}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--water-700);outline-offset:4px}
+
+/* заголовки блоков */
+h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 
 /* списки-строки */
-h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 .lines{display:grid;gap:0;max-width:78ch}
-.lines p{
-  padding:19px 0;
-  border-bottom:1px solid var(--rule);
-  font-size:17.5px;
-}
-.lines p:first-child{border-top:1px solid var(--rule)}
+.lines p{padding:19px 0;border-bottom:1px solid var(--line-hairline);font-size:17.5px}
+.lines p:first-child{border-top:1px solid var(--line-hairline)}
 
 /* цитаты */
 .quotes{display:grid;gap:30px;max-width:74ch}
 .quotes p{
-  font-family:"Prata",Georgia,serif;
+  font-family:var(--font-display);
   font-size:clamp(19px,2.5vw,25px);
   line-height:1.44;
-  color:var(--ink);
+  color:var(--text-title);
   padding-left:26px;
-  border-left:1px solid var(--amber);
+  border-left:1px solid var(--sand-600);
 }
-.sub{color:var(--muted);font-size:15px;margin-top:-30px;margin-bottom:44px}
+.sub{color:var(--text-muted);font-size:15px;margin-top:-30px;margin-bottom:44px}
+.intro{color:var(--text-body);max-width:66ch;margin-bottom:38px;margin-top:-24px}
 
-/* последствия */
-.arrows{display:grid;gap:0;max-width:76ch}
-.arrows div{
-  display:grid;grid-template-columns:34px 1fr;gap:8px;
-  padding:22px 0;border-bottom:1px solid var(--rule);
+/* о практике (доверие) */
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
+.about-photo{border-radius:var(--radius-soft);overflow:hidden;box-shadow:var(--shadow-soft);aspect-ratio:4/5}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.about-fact{
+  display:inline-flex;flex-direction:column;gap:2px;
+  padding:18px 24px;border:1px solid var(--line-hairline);border-radius:var(--radius-2);
+  margin-bottom:28px;background:var(--surface-card);
 }
-.arrows span{color:var(--amber);font-size:18px;line-height:1.5}
-.intro{color:var(--ink-dim);max-width:66ch;margin-bottom:38px;margin-top:-24px}
+.about-fact b{font-family:var(--font-display);font-size:34px;font-weight:400}
+.about-fact span{font-size:13px;color:var(--text-muted);letter-spacing:.04em}
+.about p{color:var(--text-body);margin-bottom:18px;max-width:56ch}
+@media (max-width:760px){.about{grid-template-columns:1fr}.about-photo{max-width:320px}}
 
 /* шаги */
 .steps{display:grid;gap:0;counter-reset:s}
-.step{
-  display:grid;grid-template-columns:64px 1fr;
-  gap:14px;padding:30px 0;border-bottom:1px solid var(--rule);
-  align-items:start;
-}
-.step:first-child{border-top:1px solid var(--rule)}
-.step .num{
-  font-family:"Prata",serif;font-size:26px;color:var(--amber);line-height:1.1;
-}
+.step{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:30px 0;border-bottom:1px solid var(--line-hairline);align-items:start}
+.step:first-child{border-top:1px solid var(--line-hairline)}
+.step .num{font-family:var(--font-display);font-size:26px;color:var(--sand-600);line-height:1.1}
 .step h3{font-size:20px;margin-bottom:9px}
-.step p{color:var(--ink-dim);max-width:64ch}
+.step p{color:var(--text-body);max-width:64ch}
 
 /* отзывы */
-.notes{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(266px,1fr));
-  gap:1px;
-  background:var(--rule);
-  border:1px solid var(--rule);
-}
-.notes p{
-  background:var(--cream);
-  padding:26px 24px;
-  font-size:16.5px;
-  line-height:1.5;
-}
-.notes p::before{content:"“";color:var(--amber);font-family:"Prata",serif;font-size:26px;display:block;line-height:.6;margin-bottom:12px}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(266px,1fr));gap:1px;background:var(--line-hairline);border:1px solid var(--line-hairline)}
+.notes p{background:var(--surface-page);padding:26px 24px;font-size:16.5px;line-height:1.5}
+.notes p::before{content:"\201C";color:var(--sand-600);font-family:var(--font-display);font-size:26px;display:block;line-height:.6;margin-bottom:12px}
 
 /* сомнения */
-.doubt{max-width:70ch}
-.doubt h3{font-family:"Prata",serif;font-size:clamp(20px,2.6vw,25px);margin-bottom:20px}
-.doubt p{color:var(--ink-dim)}
+.doubt-grid{display:grid;gap:0;max-width:78ch}
+.doubt-item{padding:28px 0;border-bottom:1px solid var(--line-hairline)}
+.doubt-item:first-child{border-top:1px solid var(--line-hairline)}
+.doubt-item h3{font-family:var(--font-display);font-size:clamp(19px,2.4vw,23px);margin-bottom:12px;font-weight:400}
+.doubt-item p{color:var(--text-body)}
 
 /* финал */
-.final{background:var(--ink);color:var(--cream);border-top:0}
-.final .eyebrow{color:var(--amber)}
-.final h2{margin-bottom:24px}
-.final p{color:rgba(245,238,221,.72);max-width:64ch;margin-bottom:44px}
-.final .btn{background:var(--amber);color:var(--ink)}
-.final .btn:hover{background:#efb352}
-.final .btn-price{color:var(--cream);border-color:rgba(245,238,221,.28)}
-.final .btn-price:hover{background:rgba(245,238,221,.07)}
-.final .btn-price span{color:rgba(245,238,221,.6)}
+.final{background:var(--water-900);color:var(--water-000);border-top:0;position:relative;overflow:hidden}
+.final::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(155deg,rgba(255,255,255,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.final .eyebrow{color:var(--sand-400)}
+.final h2{color:var(--water-000);margin-bottom:24px}
+.final p{color:rgba(250,253,253,.76);max-width:60ch;margin-bottom:20px}
+.final .price{font-family:var(--font-display);font-size:40px;color:var(--water-000);margin-bottom:6px}
+.final .price span{display:block;font-family:var(--font-sans);font-size:14px;color:rgba(250,253,253,.55);margin-top:6px;letter-spacing:.02em}
+.final .btn-secondary{color:var(--water-000);border-color:rgba(250,253,253,.30)}
+.final .btn-secondary:hover{background:rgba(250,253,253,.08)}
 
 footer{
-  padding:40px 0 56px;
-  background:var(--ink);
-  color:rgba(245,238,221,.66);font-size:14px;
+  padding:40px 0 56px;background:var(--water-900);color:rgba(250,253,253,.66);font-size:14px;
   display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;
 }
 footer a{text-decoration:none}
-footer a:hover{color:var(--amber)}
+footer a:hover{color:var(--sand-400)}
 
 @media (max-width:640px){
   section{padding:68px 0}
-  .hero{padding:54px 0 76px}
+  .hero{padding:56px 0 72px}
   .wrap{padding:0 22px}
-  .btn,.btn-price{width:100%}
+  .btn,.btn-secondary{width:100%}
   .step{grid-template-columns:44px 1fr}
-}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
 }
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <div class="hero-wave"><img src="assets/water-wave.jpg" alt=""></div>
   <div class="wrap">
     <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
     <h1>Тело больше не справляется само</h1>
     <p class="lede">Биодинамика это решение ваших жизненных проблем через мягкую работу с телом, почти неощутимыми касаниями, без манипуляций, вправлений и давления. Боли, болезни, восстановление после травм, операций, родов, нервного срыва и тяжёлых периодов, состояние, из которого организм сам уже не выходит.</p>
     <div class="cta-row">
       <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
-      <a class="btn btn-price" href="https://wa.me/905368726735" target="_blank" rel="noopener"><b>12 000 ₽</b><span>час работы и неделя сопровождения</span></a>
+      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
     </div>
   </div>
 </header>
@@ -226,24 +222,36 @@ footer a:hover{color:var(--amber)}
 
 <section>
   <div class="wrap">
-    <h2>Так это звучит у тех, кто приходит</h2>
-    <p class="sub">Прямая речь людей до первого сеанса.</p>
-    <div class="quotes">
-      <p>Я уже реально не понимаю, где заканчивается моё «я устала» и начинается нормальная реакция человека на жизнь</p>
-      <p>Просто внутреннее напряжение, которое сильно давит в тело, особенно в шею, спину, голову</p>
-      <p>Магний, глицин, прогулка перед сном, цифровой детокс, травяной чай, горячий душ, режим, и вот это всё не помогает. Оно не работает</p>
-      <p>Кто-нибудь знает, как расслабиться? Прям вот полностью расслабиться и отдохнуть?</p>
-      <p>Если сейчас хорошо, потом будет плохо</p>
-      <p>Я не могу спокойно сидеть без дела. Мне постоянно надо что-то делать</p>
-      <p>Как взрастить в себе чувство опоры? Где искать её? Почему так сложно подойти к себе и говорить «нет»?</p>
-      <p>Честно, я так устала. Будто потеряла себя где-то по дороге</p>
-      <p>Мне просто нужно, чтобы кто-то взял на себя все вопросы, хотя бы на неделю-две. Мне бы сохраниться</p>
-      <p>Опять всё в норме. Лучше бы уже нашли хоть что-то</p>
-      <p>Все врачи говорили: это нервы. Оказалось, не нервы</p>
-      <p>Четыре месяца после замены сустава, а я всё хромаю. К вечеру сильнее</p>
-      <p>Шов зажил, а внутри тянет до сих пор</p>
-      <p>Бывают дни, когда я себя в зеркале не узнаю</p>
-      <p>Мне бы теперь жить, а здоровье посыпалось</p>
+    <h2>Кто ведёт сеансы</h2>
+    <div class="about">
+      <div class="about-photo"><img src="assets/water-wave.jpg" alt=""></div>
+      <div>
+        <div class="about-fact"><b>14 лет</b><span>практики</span></div>
+        <p>Я не лечу симптом отдельно от человека — ищу глубинную причину, из-за которой тело, психика или жизнь перестали справляться, и помогаю организму вернуть собственную способность к саморегуляции.</p>
+        <p>Принимаю очно в Анталье и работаю дистанционно с людьми по всему миру — на практике дистанционный сеанс нередко оказывается даже эффективнее очного.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap doubt-grid" style="max-width:78ch">
+    <h2 style="margin-bottom:44px">Сомнения</h2>
+    <div class="doubt-item">
+      <h3>Вдруг это опять окажется пустой тратой денег?</h3>
+      <p>Результат за один раз не обещаю. Но час полной остановки вы получите в любом случае, а всё, что осталось непонятным или неощутимым, обсуждаем на сопровождении (оно входит в стоимость).</p>
+    </div>
+    <div class="doubt-item">
+      <h3>Я уже всё перепробовала — йога, медитации, детокс — ничего не помогает</h3>
+      <p>Когда воля и техники исчерпаны, дальше работает не ещё одна практика, а прямой контакт с нервной системой через тело.</p>
+    </div>
+    <div class="doubt-item">
+      <h3>Это же ещё одна «альтернативная медицина»?</h3>
+      <p>Это не альтернатива лечению и не эзотерика — работа руками с нервной системой, без обещания чудес. К врачу это не заменяет, а идёт рядом.</p>
+    </div>
+    <div class="doubt-item">
+      <h3>У меня правда нет часа и потом ещё недели на сопровождение</h3>
+      <p>Сеанс — один час. Сопровождение идёт фоном в переписке, без звонков и встреч, отвечаю по мере ваших вопросов.</p>
     </div>
   </div>
 </section>
@@ -251,12 +259,12 @@ footer a:hover{color:var(--amber)}
 <section>
   <div class="wrap">
     <h2>Куда это обычно ведёт</h2>
-    <p class="intro">Хроническое напряжение редко проходит само, тело привыкает и записывает его в норму. Дальше обычно так:</p>
-    <div class="arrows">
-      <div><span>→</span><p>Контроль становится образом жизни: доверять себе, людям и планам всё труднее.</p></div>
-      <div><span>→</span><p>Круг сужается: меньше поездок, встреч и перемен, потому что «так спокойнее».</p></div>
-      <div><span>→</span><p>Тело говорит громче: сон, боль, усталость, обследования без диагнозов.</p></div>
-      <div><span>→</span><p>И самое незаметное: к состоянию привыкаешь настолько, что оно начинает казаться характером.</p></div>
+    <p class="intro">Хроническое напряжение редко проходит само, тело привыкает и записывает его в норму. Вот как это звучит у тех, кто живёт в этом годами:</p>
+    <div class="quotes">
+      <p>Если сейчас хорошо, потом будет плохо.</p>
+      <p>Испытываю чувство стыда за то, что могу днём прилечь даже на 10 минут.</p>
+      <p>Закрыла дверь три раза, дошла до лифта и снова проверила ещё четыре раза.</p>
+      <p>Это не спокойствие, это затишье перед бурей.</p>
     </div>
   </div>
 </section>
@@ -321,21 +329,15 @@ footer a:hover{color:var(--amber)}
   </div>
 </section>
 
-<section>
-  <div class="wrap doubt">
-    <h2>Сомнения</h2>
-    <h3>Вдруг это опять окажется пустой тратой денег?</h3>
-    <p>Результат за один раз не обещаю. Но час полной остановки вы получите в любом случае, а всё, что осталось непонятным или неощутимым, обсуждаем на сопровождении (оно входит в стоимость).</p>
-  </div>
-</section>
-
 <section class="final">
   <div class="wrap">
-    <h2>Один час, чтобы попробовать</h2>
+    <p class="eyebrow">Один час, чтобы попробовать</p>
+    <h2>Начните с одного сеанса</h2>
     <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
+    <div class="price">12 000 ₽<span>час работы и неделя сопровождения</span></div>
     <div class="cta-row">
       <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
-      <a class="btn btn-price" href="https://wa.me/905368726735" target="_blank" rel="noopener"><b>12 000 ₽</b><span>час работы и неделя сопровождения</span></a>
+      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
     </div>
   </div>
 </section>
