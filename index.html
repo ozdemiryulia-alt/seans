@@ -67,15 +67,13 @@ section{padding:96px 0;border-top:1px solid var(--line-hairline)}
   overflow:hidden;
   background:linear-gradient(165deg,var(--water-100) 0%,var(--air-050) 55%,var(--sand-100) 100%);
 }
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .hero-wave{
-  position:absolute;right:-8%;top:-6%;width:52%;max-width:560px;aspect-ratio:3/4;
-  border-radius:var(--radius-soft);overflow:hidden;
+  border-radius:var(--radius-soft);overflow:hidden;aspect-ratio:3/4;
   box-shadow:var(--shadow-soft);
-  opacity:.92;
 }
 .hero-wave img{width:100%;height:100%;object-fit:cover;display:block}
-@media (max-width:860px){.hero-wave{display:none}}
-.hero .wrap{position:relative;max-width:640px}
+@media (max-width:860px){.hero-inner{grid-template-columns:1fr}.hero-wave{display:none}}
 .hero h1{font-size:clamp(38px,6.4vw,64px);max-width:14ch;margin-bottom:28px}
 .lede{font-size:clamp(17px,2.1vw,20px);max-width:56ch;color:var(--text-body);line-height:1.68}
 
@@ -186,17 +184,33 @@ footer a:hover{color:var(--sand-400)}
 <body>
 
 <header class="hero">
-  <div class="hero-wave"><img src="assets/water-wave.jpg" alt=""></div>
-  <div class="wrap">
-    <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
-    <h1>Тело больше не справляется само</h1>
-    <p class="lede">«Анализы в порядке», говорят врачи. А вам не в порядке, и вы уже не помните, когда было иначе. Биодинамика работает с телом почти неощутимыми касаниями, без манипуляций, вправлений и давления: с болью, с последствиями травм, операций и родов, с тем состоянием после нервного срыва или тяжёлого периода, из которого организм сам уже не выходит.</p>
-    <div class="cta-row">
-      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
-      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
+      <h1>Тело больше не справляется само</h1>
+      <p class="lede">«Анализы в порядке», говорят врачи. А вам не в порядке, и вы уже не помните, когда было иначе. Биодинамика работает с телом почти неощутимыми касаниями, без манипуляций, вправлений и давления: с болью, с последствиями травм, операций и родов, с тем состоянием после нервного срыва или тяжёлого периода, из которого организм сам уже не выходит.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
+        <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+      </div>
     </div>
+    <div class="hero-wave"><img src="assets/water-wave.jpg" alt=""></div>
   </div>
 </header>
+
+<section>
+  <div class="wrap">
+    <h2>Кто ведёт сеансы</h2>
+    <div class="about">
+      <div class="about-photo"><img src="assets/yulia-seans.jpg" alt="Юлия ОздеМир на сеансе"></div>
+      <div>
+        <div class="about-fact"><b>14 лет</b><span>практики</span></div>
+        <p>Я не лечу симптом отдельно от человека — ищу глубинную причину, из-за которой тело, психика или жизнь перестали справляться, и помогаю организму вернуть собственную способность к саморегуляции.</p>
+        <p>Принимаю очно в Анталье и работаю дистанционно с людьми по всему миру — на практике дистанционный сеанс нередко оказывается даже эффективнее очного.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
@@ -216,42 +230,6 @@ footer a:hover{color:var(--sand-400)}
       <p>Мама выздоровела, развод закончился, деньги на бизнес нашлись. Жить бы теперь, а здоровье посыпалось.</p>
       <p>После нервного срыва прошло время, вы вернулись к делам, а тело до сих пор дёргается от любой мелочи.</p>
       <p>Живёте с диагнозом, который никуда не денется, и учитесь жить рядом с ним, а не против него.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Кто ведёт сеансы</h2>
-    <div class="about">
-      <div class="about-photo"><img src="assets/water-wave.jpg" alt=""></div>
-      <div>
-        <div class="about-fact"><b>14 лет</b><span>практики</span></div>
-        <p>Я не лечу симптом отдельно от человека — ищу глубинную причину, из-за которой тело, психика или жизнь перестали справляться, и помогаю организму вернуть собственную способность к саморегуляции.</p>
-        <p>Принимаю очно в Анталье и работаю дистанционно с людьми по всему миру — на практике дистанционный сеанс нередко оказывается даже эффективнее очного.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap doubt-grid" style="max-width:78ch">
-    <h2 style="margin-bottom:44px">Сомнения</h2>
-    <div class="doubt-item">
-      <h3>Вдруг это опять окажется пустой тратой денег?</h3>
-      <p>Результат за один раз не обещаю. Но час полной остановки вы получите в любом случае, а всё, что осталось непонятным или неощутимым, обсуждаем на сопровождении (оно входит в стоимость).</p>
-    </div>
-    <div class="doubt-item">
-      <h3>Я уже всё перепробовала — йога, медитации, детокс — ничего не помогает</h3>
-      <p>Когда воля и техники исчерпаны, дальше работает не ещё одна практика, а прямой контакт с нервной системой через тело.</p>
-    </div>
-    <div class="doubt-item">
-      <h3>Это же ещё одна «альтернативная медицина»?</h3>
-      <p>Это не альтернатива лечению и не эзотерика — работа руками с нервной системой, без обещания чудес. К врачу это не заменяет, а идёт рядом.</p>
-    </div>
-    <div class="doubt-item">
-      <h3>У меня правда нет часа и потом ещё недели на сопровождение</h3>
-      <p>Сеанс — один час. Сопровождение идёт фоном в переписке, без звонков и встреч, отвечаю по мере ваших вопросов.</p>
     </div>
   </div>
 </section>
@@ -306,6 +284,24 @@ footer a:hover{color:var(--sand-400)}
 </section>
 
 <section>
+  <div class="wrap doubt-grid" style="max-width:78ch">
+    <h2 style="margin-bottom:44px">Сомнения</h2>
+    <div class="doubt-item">
+      <h3>Вдруг это опять окажется пустой тратой денег?</h3>
+      <p>Результат за один раз не обещаю. Но час полной остановки вы получите в любом случае, а всё, что осталось непонятным или неощутимым, обсуждаем на сопровождении (оно входит в стоимость).</p>
+    </div>
+    <div class="doubt-item">
+      <h3>Я уже всё перепробовала — йога, медитации, детокс — ничего не помогает</h3>
+      <p>Когда воля и техники исчерпаны, дальше работает не ещё одна практика, а прямой контакт с нервной системой через тело.</p>
+    </div>
+    <div class="doubt-item">
+      <h3>Это же ещё одна «альтернативная медицина»?</h3>
+      <p>Это не альтернатива лечению и не эзотерика — работа руками с нервной системой, без обещания чудес. К врачу это не заменяет, а идёт рядом.</p>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="wrap">
     <h2>Что отмечают после сеансов</h2>
     <p class="intro">Гарантий в телесной работе честно не бывает, тело у каждого своё, и темп у него свой. Вот что чаще всего называют клиенты:</p>
@@ -330,7 +326,19 @@ footer a:hover{color:var(--sand-400)}
 </section>
 
 <section class="final">
-  <div class="wrap">
+  <img src="assets/leaf-texture.jpg" alt=""
+    style="position:absolute;left:0;bottom:0;width:280px;height:100%;object-fit:cover;object-position:left center;
+    mix-blend-mode:luminosity;opacity:.5;
+    -webkit-mask-image:linear-gradient(to right,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,transparent 90%);
+    mask-image:linear-gradient(to right,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,transparent 90%);
+    pointer-events:none">
+  <img src="assets/leaf-texture.jpg" alt=""
+    style="position:absolute;right:0;top:0;width:280px;height:100%;object-fit:cover;object-position:right center;
+    mix-blend-mode:luminosity;opacity:.5;
+    -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,transparent 90%);
+    mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,transparent 90%);
+    pointer-events:none">
+  <div class="wrap" style="position:relative;z-index:1">
     <p class="eyebrow">Один час, чтобы попробовать</p>
     <h2>Начните с одного сеанса</h2>
     <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
