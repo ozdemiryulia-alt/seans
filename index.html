@@ -136,10 +136,16 @@ h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 .about p{color:var(--text-body);margin-bottom:18px;max-width:56ch}
 @media (max-width:760px){.about{grid-template-columns:1fr}.about-photo{max-width:320px}}
 
-.master{max-width:68ch}
-.master-photo{width:120px;margin-bottom:32px}
+.master{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.master-photos{display:grid;gap:20px;position:sticky;top:32px}
+.master-photo-card{border-radius:var(--radius-2);overflow:hidden;box-shadow:var(--shadow-soft)}
+.master-photo-card img{width:100%;display:block}
 .master-text p{color:var(--text-body);margin-bottom:20px;max-width:68ch}
-.master-text p:first-child{font-family:var(--font-display);font-size:22px;color:var(--text-title)}
+.master-text p:first-child{font-weight:500;font-size:19px;color:var(--text-title)}
+@media (max-width:860px){
+  .master{grid-template-columns:1fr}
+  .master-photos{position:static;grid-template-columns:1fr 1fr;max-width:420px}
+}
 
 /* шаги */
 .steps{display:grid;gap:0;counter-reset:s}
@@ -217,7 +223,10 @@ footer a:hover{color:var(--sand-400)}
   <div class="wrap">
     <h2>О Мастере</h2>
     <div class="master">
-      <div class="about-photo master-photo"><img src="assets/yulia-portret.jpg" alt="Юлия ОздеМир"></div>
+      <div class="master-photos">
+        <div class="master-photo-card"><img src="assets/master-1.jpg" alt="Юлия ОздеМир на сеансе"></div>
+        <div class="master-photo-card"><img src="assets/master-2.jpg" alt="Юлия ОздеМир"></div>
+      </div>
       <div class="master-text">
         <p>«Юля, у меня колено», — говорит человек в начале сеанса.</p>
         <p>Мы начинаем с колена. Оно честно болит, мешает ходить, не даёт спать и требует, чтобы им наконец занялись. А потом в разговоре появляются травма, после которой всё началось, работа без выходных, мать, которой снова нужна помощь, развод, переезд, страх и усталость размером с небольшую страну.</p>
