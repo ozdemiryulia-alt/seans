@@ -53,7 +53,7 @@ p{margin:0}
 a{color:inherit}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-section{padding:96px 0;border-top:1px solid var(--line-hairline)}
+section{padding:60px 0;border-top:1px solid var(--line-hairline)}
 .eyebrow{
   font-size:12px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--sand-600);font-weight:600;margin-bottom:34px;
@@ -62,18 +62,20 @@ section{padding:96px 0;border-top:1px solid var(--line-hairline)}
 /* hero */
 .hero{
   border-top:0;
-  padding:88px 0 96px;
+  padding:100px 0 88px;
   position:relative;
   overflow:hidden;
-  background:linear-gradient(165deg,var(--water-100) 0%,var(--air-050) 55%,var(--sand-100) 100%);
 }
-.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
-.hero-wave{
-  border-radius:var(--radius-soft);overflow:hidden;aspect-ratio:3/4;
-  box-shadow:var(--shadow-soft);
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(100deg,var(--air-050) 0%,var(--air-050) 20%,rgba(252,251,248,.55) 45%,rgba(252,251,248,.15) 65%,transparent 85%),
+    linear-gradient(to top,var(--air-050) 0%,transparent 30%),
+    url("assets/water-wave.jpg");
+  background-size:cover,cover,cover;
+  background-position:center,center,75% center;
+  opacity:.9;
 }
-.hero-wave img{width:100%;height:100%;object-fit:cover;display:block}
-@media (max-width:860px){.hero-inner{grid-template-columns:1fr}.hero-wave{display:none}}
+.hero .wrap{position:relative;z-index:1}
 .hero h1{font-size:clamp(38px,6.4vw,64px);max-width:14ch;margin-bottom:28px}
 .lede{font-size:clamp(17px,2.1vw,20px);max-width:56ch;color:var(--text-body);line-height:1.68}
 
@@ -173,28 +175,32 @@ footer a{text-decoration:none}
 footer a:hover{color:var(--sand-400)}
 
 @media (max-width:640px){
-  section{padding:68px 0}
-  .hero{padding:56px 0 72px}
+  section{padding:44px 0}
+  .hero{padding:44px 0 56px}
   .wrap{padding:0 22px}
   .btn,.btn-secondary{width:100%}
   .step{grid-template-columns:44px 1fr}
+  .hero-bg{
+    background-image:linear-gradient(rgba(252,251,248,.78),rgba(252,251,248,.78)),
+      url("assets/water-wave.jpg");
+    background-size:cover,cover;
+    background-position:center,60% center;
+  }
 }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="wrap hero-inner">
-    <div>
-      <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
-      <h1>Тело больше не справляется само</h1>
-      <p class="lede">«Анализы в порядке», говорят врачи. А вам не в порядке, и вы уже не помните, когда было иначе. Биодинамика работает с телом почти неощутимыми касаниями, без манипуляций, вправлений и давления: с болью, с последствиями травм, операций и родов, с тем состоянием после нервного срыва или тяжёлого периода, из которого организм сам уже не выходит.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
-        <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
-      </div>
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <p class="eyebrow">Юлия ОздеМир · остеопатия · биодинамика · очно и дистанционно</p>
+    <h1>Тело больше не справляется само</h1>
+    <p class="lede">Биодинамика нужна, чтобы тело перестало быть вашим главным проблемным проектом и снова стало надёжной системой. На сеансе мы помогаем ему перенастроить внутренние процессы: перестать тратить силы на старые сбои, вернуть саморегуляцию и направить энергию туда, где она действительно нужна. На жизнь.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
+      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
     </div>
-    <div class="hero-wave"><img src="assets/water-wave.jpg" alt=""></div>
   </div>
 </header>
 
@@ -202,11 +208,11 @@ footer a:hover{color:var(--sand-400)}
   <div class="wrap">
     <h2>Кто ведёт сеансы</h2>
     <div class="about">
-      <div class="about-photo"><img src="assets/yulia-seans.jpg" alt="Юлия ОздеМир на сеансе"></div>
+      <div class="about-photo"><img src="assets/yulia-portret.jpg" alt="Юлия ОздеМир"></div>
       <div>
-        <div class="about-fact"><b>14 лет</b><span>практики</span></div>
-        <p>Я не лечу симптом отдельно от человека — ищу глубинную причину, из-за которой тело, психика или жизнь перестали справляться, и помогаю организму вернуть собственную способность к саморегуляции.</p>
-        <p>Принимаю очно в Анталье и работаю дистанционно с людьми по всему миру — на практике дистанционный сеанс нередко оказывается даже эффективнее очного.</p>
+        <p style="font-weight:500;margin-bottom:22px">Юлия ОздеМир, специалист по оздоровлению, Мастер Рэйки, сеансы биодинамики, остеопатии, Рэйки. Автор и ведущая <a href="https://ozdemiryulia-alt.github.io/reikigamebox/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--sand-600)">Игры «Прикосновение Рэйки»</a>.</p>
+        <p>Мои руки всегда в работе. Уже более 14 лет я провожу оздоровительные сеансы биодинамики и рэйки, чтобы вам стало легче жить вашу непростую жизнь. Древние и современные, безопасные и эффективные методы.</p>
+        <p>А перед сеансом мы говорим о том, что вас беспокоит. Возможна удалённая работа.</p>
       </div>
     </div>
   </div>
