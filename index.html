@@ -29,7 +29,7 @@
   --font-display:"Prata","Times New Roman",serif;
   --font-sans:"Manrope","Helvetica Neue",Arial,sans-serif;
 
-  --radius-1:3px; --radius-2:8px; --radius-soft:48px;
+  --radius-1:3px; --radius-2:8px; --radius-soft:48px; --radius-leaf:999px 12px 999px 12px;
   --sp-5:24px; --sp-7:48px; --sp-9:104px;
   --maxw:1120px;
 
@@ -138,7 +138,7 @@ h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 
 .master{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
 .master-photos{display:grid;gap:20px;position:sticky;top:32px}
-.master-photo-card{border-radius:var(--radius-2);overflow:hidden;box-shadow:var(--shadow-soft)}
+.master-photo-card{border-radius:var(--radius-leaf);overflow:hidden;box-shadow:var(--shadow-soft)}
 .master-photo-card img{width:100%;display:block}
 .master-text p{color:var(--text-body);margin-bottom:20px;max-width:68ch}
 .master-text p:first-child{font-weight:500;font-size:19px;color:var(--text-title)}
