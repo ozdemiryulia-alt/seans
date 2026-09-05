@@ -80,11 +80,10 @@ section:has(.block-acc){padding:32px 0}
   opacity:.9;
 }
 .doubt-section{
-  background-image:linear-gradient(100deg,var(--air-050) 0%,var(--air-050) 20%,rgba(252,251,248,.55) 45%,rgba(252,251,248,.15) 65%,transparent 85%),
-    linear-gradient(to top,var(--air-050) 0%,transparent 30%),
+  background-image:linear-gradient(rgba(252,251,248,.4),rgba(252,251,248,.4)),
     url("assets/water-wave.jpg");
-  background-size:cover,cover,cover;
-  background-position:center,center,75% center;
+  background-size:cover,cover;
+  background-position:center,75% center;
 }
 .hero .wrap{position:relative;z-index:1}
 .hero h1{font-size:clamp(38px,6.4vw,64px);max-width:14ch;margin-bottom:28px}
@@ -187,7 +186,7 @@ h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 .doubt-item p+p{margin-top:14px}
 
 /* аккордеон на весь блок */
-.block-acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:78ch}
+.block-acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:calc(78ch - 44px)}
 .block-acc summary::-webkit-details-marker{display:none}
 .block-acc summary h2{margin-bottom:0}
 .block-acc summary .acc-icon{font-family:var(--font-sans);font-size:32px;font-weight:300;color:var(--sand-600);flex:0 0 auto;line-height:1;transition:transform .2s ease}
@@ -223,7 +222,7 @@ footer a:hover{color:var(--sand-400)}
   .wrap{padding:0 22px}
   .btn,.btn-secondary{width:100%}
   .step{grid-template-columns:44px 1fr}
-  .hero-bg,.doubt-section{
+  .hero-bg{
     background-image:linear-gradient(180deg,var(--air-050) 0%,var(--air-050) 40%,rgba(252,251,248,.82) 62%,rgba(252,251,248,.42) 82%,rgba(252,251,248,.15) 100%),
       url("assets/water-wave.jpg");
     background-size:cover,cover;
