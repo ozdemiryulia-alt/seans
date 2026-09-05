@@ -180,11 +180,12 @@ h2{font-size:clamp(27px,3.6vw,38px);margin-bottom:44px;max-width:20ch}
 .doubt-item p+p{margin-top:14px}
 
 /* аккордеон на весь блок */
-.block-acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.block-acc summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:20px}
 .block-acc summary::-webkit-details-marker{display:none}
 .block-acc summary h2{margin-bottom:0}
 .block-acc summary .acc-icon{font-family:var(--font-sans);font-size:32px;font-weight:300;color:var(--sand-600);flex:0 0 auto;line-height:1;transition:transform .2s ease}
 .block-acc[open] summary .acc-icon{transform:rotate(45deg)}
+section:has(.block-acc:not([open])) > img{display:none}
 .block-acc-body{margin-top:44px}
 
 /* финал */
