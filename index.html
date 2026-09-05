@@ -236,6 +236,8 @@ section:has(.block-acc:not([open])) > img{display:none}
 .final .price span{display:block;font-family:var(--font-sans);font-size:14px;color:rgba(250,253,253,.55);margin-top:6px;letter-spacing:.02em}
 .final .btn-secondary{color:var(--water-000);border-color:rgba(250,253,253,.30)}
 .final .btn-secondary:hover{background:rgba(250,253,253,.08)}
+.final-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:start}
+@media (max-width:760px){.final-grid{grid-template-columns:1fr;gap:36px}}
 
 footer{
   padding:40px 0 56px;background:var(--water-900);color:rgba(250,253,253,.66);font-size:14px;
@@ -482,17 +484,23 @@ footer a:hover{color:var(--sand-400)}
     mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,transparent 90%);
     pointer-events:none">
   <div class="wrap" style="position:relative;z-index:1">
-    <p class="eyebrow">Один час, чтобы попробовать</p>
-    <h2>Начните с одного сеанса</h2>
-    <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
-    <div class="price">12 000 ₽<span>час работы и неделя сопровождения</span></div>
-    <label style="display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:rgba(250,253,253,.80);max-width:44ch;margin-top:24px">
-      <input type="checkbox" id="consent-check" style="margin-top:4px;width:18px;height:18px;accent-color:var(--sand-600);flex:0 0 auto">
-      <span>Я согласен(на) с условиями <a href="oferta.html" target="_blank" style="color:var(--water-300);border-bottom:1px solid rgba(176,208,209,.5)">публичной оферты</a> и даю согласие на обработку персональных данных для записи на сеанс.</span>
-    </label>
-    <div class="cta-row">
-      <a id="book-btn" class="btn" href="#" aria-disabled="true" target="_blank" rel="noopener" style="opacity:.55;pointer-events:none">Записаться на сеанс</a>
-      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+    <div class="final-grid">
+      <div>
+        <p class="eyebrow">Один час, чтобы попробовать</p>
+        <h2>Начните с одного сеанса</h2>
+        <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+        <div class="price">12 000 ₽<span>час работы и неделя сопровождения</span></div>
+        <label style="display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:rgba(250,253,253,.80);max-width:40ch">
+          <input type="checkbox" id="consent-check" style="margin-top:4px;width:18px;height:18px;accent-color:var(--sand-600);flex:0 0 auto">
+          <span>Я согласен(на) с условиями <a href="oferta.html" target="_blank" style="color:var(--water-300);border-bottom:1px solid rgba(176,208,209,.5)">публичной оферты</a> и даю согласие на обработку персональных данных для записи на сеанс.</span>
+        </label>
+        <div class="cta-row" style="margin-top:0">
+          <a id="book-btn" class="btn" href="#" aria-disabled="true" target="_blank" rel="noopener" style="opacity:.55;pointer-events:none">Записаться на сеанс</a>
+          <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
