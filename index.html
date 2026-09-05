@@ -486,12 +486,36 @@ footer a:hover{color:var(--sand-400)}
     <h2>Начните с одного сеанса</h2>
     <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
     <div class="price">12 000 ₽<span>час работы и неделя сопровождения</span></div>
+    <label style="display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:rgba(250,253,253,.80);max-width:44ch;margin-top:24px">
+      <input type="checkbox" id="consent-check" style="margin-top:4px;width:18px;height:18px;accent-color:var(--sand-600);flex:0 0 auto">
+      <span>Я согласен(на) с условиями <a href="oferta.html" target="_blank" style="color:var(--water-300);border-bottom:1px solid rgba(176,208,209,.5)">публичной оферты</a> и даю согласие на обработку персональных данных для записи на сеанс.</span>
+    </label>
     <div class="cta-row">
-      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
+      <a id="book-btn" class="btn" href="#" aria-disabled="true" target="_blank" rel="noopener" style="opacity:.55;pointer-events:none">Записаться на сеанс</a>
       <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
     </div>
   </div>
 </section>
+
+<script>
+  const consentCheck = document.getElementById('consent-check');
+  const bookBtn = document.getElementById('book-btn');
+  const BOOK_URL = 'https://wa.me/905368726735';
+  function syncConsent(){
+    if(consentCheck.checked){
+      bookBtn.setAttribute('href', BOOK_URL);
+      bookBtn.removeAttribute('aria-disabled');
+      bookBtn.style.opacity = '1';
+      bookBtn.style.pointerEvents = 'auto';
+    } else {
+      bookBtn.setAttribute('href', '#');
+      bookBtn.setAttribute('aria-disabled', 'true');
+      bookBtn.style.opacity = '.55';
+      bookBtn.style.pointerEvents = 'none';
+    }
+  }
+  consentCheck.addEventListener('change', syncConsent);
+</script>
 
 <footer>
   <div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;width:100%">
@@ -503,6 +527,9 @@ footer a:hover{color:var(--sand-400)}
         Telegram
       </a>
     </span>
+  </div>
+  <div class="wrap" style="margin-top:16px;font-size:13px;color:rgba(250,253,253,.44)">
+    <a href="oferta.html" style="color:rgba(250,253,253,.44)">Публичная оферта</a> · ИП Оздемир Юлия Владимировна
   </div>
 </footer>
 
