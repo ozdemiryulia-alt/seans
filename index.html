@@ -299,8 +299,8 @@ footer a:hover{color:var(--sand-400)}
     <h1>Тело больше не справляется само</h1>
     <p class="lede"><span class="em-ink">Биодинамика нужна, чтобы тело перестало быть вашим главным проблемным проектом и снова стало надёжной системой.</span> На сеансе мы помогаем ему перенастроить внутренние процессы: перестать тратить силы на старые сбои, вернуть саморегуляцию и направить энергию туда, где она действительно нужна. На жизнь.</p>
     <div class="cta-row">
-      <a class="btn" href="https://wa.me/905368726735" target="_blank" rel="noopener">Записаться на сеанс</a>
-      <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+      <a class="btn" href="https://wa.me/905368726735" rel="noopener">Записаться на сеанс</a>
+      <a class="btn btn-secondary" href="https://wa.me/905368726735" rel="noopener">Задать вопрос</a>
     </div>
   </div>
 </header>
@@ -516,7 +516,7 @@ footer a:hover{color:var(--sand-400)}
         <h2>Начните с одного сеанса</h2>
         <p>После сеанса неделю остаёмся на связи: отслеживаю состояние, ощущения и отвечаю на вопросы. Если сомневаетесь, начните с одного сеанса и посмотрите на своё утро через пару дней.</p>
         <div class="cta-row" style="margin-top:8px">
-          <a class="btn btn-secondary" href="https://wa.me/905368726735" target="_blank" rel="noopener">Задать вопрос</a>
+          <a class="btn btn-secondary" href="https://wa.me/905368726735" rel="noopener">Задать вопрос</a>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px">
@@ -557,8 +557,8 @@ footer a:hover{color:var(--sand-400)}
   <div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;width:100%">
     <span>Юлия ОздеМир · биодинамика · очно и онлайн</span>
     <span style="display:flex;flex-wrap:wrap;gap:12px 24px">
-      <a href="https://wa.me/905368726735" target="_blank" rel="noopener">WhatsApp +90 536 872 67 35</a>
-      <a href="https://t.me/yulia_ozdemir" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px">
+      <a href="https://wa.me/905368726735" rel="noopener">WhatsApp +90 536 872 67 35</a>
+      <a href="https://t.me/yulia_ozdemir" rel="noopener" style="display:inline-flex;align-items:center;gap:7px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M21.9 4.6 3.4 11.9c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.2-2.1 4.6 3.4c.8.5 1.4.2 1.6-.7l3-14.1c.3-1.2-.4-1.7-1.2-1.4Zm-3 3.5-8 7.3-.3 3.4-1.5-4.7 9.4-5.9c.4-.3.8-.1.5.2Z"/></svg>
         Telegram
       </a>
@@ -573,5 +573,11 @@ footer a:hover{color:var(--sand-400)}
   </div>
 </footer>
 
+<script>
+(function(){
+ function track(name){if(typeof window.ym==='function')window.ym(112303010,'reachGoal',name);if(typeof window.gtag==='function')window.gtag('event',name);}
+ document.addEventListener('click',function(event){const link=event.target.closest('a[href]');if(!link)return;let u;try{u=new URL(link.href);}catch(e){return;}if(u.hostname==='t.me')track('contact_telegram');else if(u.hostname==='wa.me'||u.hostname==='api.whatsapp.com')track('contact_whatsapp');});
+})();
+</script>
 </body>
 </html>
